@@ -1,6 +1,6 @@
-[Parsian-TG](telegram.me/parsiantg)
+#[Parsian-TG](telegram.me/parsiantg)
 
-* ** a new Telegram persian bot based on TeleSeed*
+* a new Telegram persian bot based on TeleSeed
 
 
 
@@ -15,4 +15,5 @@ _Dev by_
 *AND MY CHANNEL*
 
 [Click here to join :)](telegram.me/spheroch)
+
 
