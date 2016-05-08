@@ -18,10 +18,10 @@ if msg.text == "salam" then
 	return "va aleykol asalam"
 end
 if msg.text == "sepehr" then
-	return "کارتو بگو من به بابیم میگم :/"
+	return "کارتو بگو من به بابیم میگم :/ "
 end
 if msg.text == "سپهر" then
-	return "با بابام چیکار داری :/\"
+	return "با بابام چیکار داری :/\ "
 end
 if msg.text == "ParsianTG" then
 	return "?"
