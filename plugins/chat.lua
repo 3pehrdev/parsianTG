@@ -23,7 +23,7 @@ end
 if msg.text == "سپهر" then
 	return "با بابام چیکار داری :/\"
 end
-if msg.text == "parsianTG" then
+if msg.text == "ParsianTG" then
 	return "?"
 end
 if msg.text == "parsiantg" then
