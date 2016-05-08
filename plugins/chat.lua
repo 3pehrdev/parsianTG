@@ -60,7 +60,7 @@ return {
 "^parsiantg$",
 "^ParsianTG$",
 "^سپهر$",
-"^[Ss]epehr$",
+"^sepehr$",
 		"^[Bb]ot$",
 		"^[Bb]ye$",
 		"^?$",
