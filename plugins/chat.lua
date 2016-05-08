@@ -32,8 +32,8 @@ end
 if msg.text == "Parsiantg" then
 	return "What?"
 end
-if msg.text == "bot" then
-	return "h?"
+if msg.text == "parsian" then
+	return "جان"
 end
 if msg.text == "Bot" then
 	return "Hum?"
@@ -58,6 +58,8 @@ return {
 "^سلام$",
 "^Parsiantg$",
 "^parsiantg$",
+"^س$",
+"^[Pp]arsian$",
 "^ParsianTG$",
 "^سپهر$",
 "^sepehr$",
