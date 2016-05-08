@@ -955,7 +955,7 @@ local function modlist(msg)
     return 'enدمدیری برای این گروه وجود ندارم'
   end
   local i = 1
-  local message = 'لیست مدیر های' .. string.gsub(msg.to.print_name, '_', ' ') .. ':\n'
+  local message = '\'لیست مدیر های' .. string.gsub(msg.to.print_name, '_', ' ') .. ':\n'
   for k,v in pairs(data[tostring(msg.to.id)]['moderators']) do
     message = message ..i..' - '..v..' [' ..k.. '] \n'
     i = i + 1
