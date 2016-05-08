@@ -952,7 +952,7 @@ local function modlist(msg)
   end
   -- determine if table is empty
   if next(data[tostring(msg.to.id)]['moderators']) == nil then --fix way
-    return 'enدمدیری برای این گروه وجود ندارم'
+    return 'مدیری برای این گروه وجود ندارد'
   end
   local i = 1
   local message = 'لیست مدیر های' .. string.gsub(msg.to.print_name, '_', ' ') .. ':\n'
