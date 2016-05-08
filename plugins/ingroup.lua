@@ -299,10 +299,10 @@ local function unlock_group_arabic(msg, data, target)
     return "برای شما مجاز نمیباشد"
   end
   local group_arabic_lock = data[tostring(target)]['settings']['lock_arabic']
-  if group_arabic_lock == 'no' then
+  if group_arabic_lock == '😞' then
     return 'فارسی از قبل قفل نبوده است'
   else
-    data[tostring(target)]['settings']['lock_arabic'] = 'no'
+    data[tostring(target)]['settings']['lock_arabic'] = '😞'
     save_data(_config.moderation.data, data)
     return 'فارسی مجاز شد'
   end
@@ -327,10 +327,10 @@ local function unlock_group_ads(msg, data, target)
     return "برای شما مجاز نمیباشد"
   end
   local group_ads_lock = data[tostring(target)]['settings']['lock_ads']
-  if group_ads_lock == 'no' then
+  if group_ads_lock == '😞' then
     return 'فرستادن لینک از قبل قفل نبوده است'
   else
-    data[tostring(target)]['settings']['lock_ads'] = 'no'
+    data[tostring(target)]['settings']['lock_ads'] = '😞'
     save_data(_config.moderation.data, data)
     return 'فرستادن لینک مجاز شد'
   end
@@ -355,10 +355,10 @@ local function unlock_group_english(msg, data, target)
     return "برای شما مجاز نمیباشد"
   end
   local group_english_lock = data[tostring(target)]['settings']['lock_english']
-  if group_english_lock == 'no' then
+  if group_english_lock == '😞' then
     return 'انگلیسی از قبل قفل نبوده است'
   else
-    data[tostring(target)]['settings']['lock_english'] = 'no'
+    data[tostring(target)]['settings']['lock_english'] = '😞'
     save_data(_config.moderation.data, data)
     return 'انگلیسی مجاز شد'
   end
@@ -383,10 +383,10 @@ local function unlock_group_share(msg, data, target)
     return "برای شما مجاز نمیباشد"
   end
   local group_share_lock = data[tostring(target)]['settings']['lock_share']
-  if group_share_lock == 'no' then
+  if group_share_lock == '😞' then
     return 'فرستادن شماره از قبل قفل نبوده است'
   else
-    data[tostring(target)]['settings']['lock_share'] = 'no'
+    data[tostring(target)]['settings']['lock_share'] = '😞'
     save_data(_config.moderation.data, data)
     return 'فرستادن شماره از قبل قفل نبوده است'
   end
@@ -411,10 +411,10 @@ local function unlock_group_video(msg, data, target)
     return "برای شما مجاز نمیباشد"
   end
   local group_video_lock = data[tostring(target)]['settings']['lock_video']
-  if group_video_lock == 'no' then
+  if group_video_lock == '😞' then
     return 'فرستادن ویدئو از قبل قفل نبوده است'
   else
-    data[tostring(target)]['settings']['lock_video'] = 'no'
+    data[tostring(target)]['settings']['lock_video'] = '😞'
     save_data(_config.moderation.data, data)
     return 'فرستادن ویدئو مجاز شد'
   end
@@ -453,10 +453,10 @@ local function unlock_group_voice(msg, data, target)
     return "برای شما مجاز نمیباشد"
   end
   local group_voice_lock = data[tostring(target)]['settings']['lock_voice']
-  if group_voice_lock == 'no' then
+  if group_voice_lock == '😞' then
     return 'فرستادن صدا از قبل قفل نبوده است'
   else
-    data[tostring(target)]['settings']['lock_voice'] = 'no'
+    data[tostring(target)]['settings']['lock_voice'] = '😞'
     save_data(_config.moderation.data, data)
     return 'فرستادن صدا مجاز شد'
   end
@@ -467,10 +467,10 @@ local function unlock_group_tag(msg, data, target)
     return "برای شما مجاز نمیباشد"
   end
   local group_tag_lock = data[tostring(target)]['settings']['antitag']
-  if group_tag_lock == 'no' then
+  if group_tag_lock == '😞' then
     return 'فرستادن @ و # از قبل قفل نبوده است'
   else
-    data[tostring(target)]['settings']['antitag'] = 'no'
+    data[tostring(target)]['settings']['antitag'] = '😞'
     save_data(_config.moderation.data, data)
     return 'فرستادن @ و # مجاز شد'
   end
@@ -495,10 +495,10 @@ local function unlock_group_join(msg, data, target)
     return "برای شما مجاز نمیباشد"
   end
   local group_join_lock = data[tostring(target)]['settings']['lock_join']
-  if group_join_lock == 'no' then
+  if group_join_lock == '😞' then
     return 'ورود با لینک از قبل قفل نبوده است'
   else
-    data[tostring(target)]['settings']['lock_join'] = 'no'
+    data[tostring(target)]['settings']['lock_join'] = '😞'
     save_data(_config.moderation.data, data)
     return 'ورود با لینک مجاز شد'
   end
@@ -523,10 +523,10 @@ local function unlock_group_emoji(msg, data, target)
     return "برای شما مجاز نمیباشد"
   end
   local group_emoji_lock = data[tostring(target)]['settings']['antiemoji']
-  if group_emoji_lock == 'no' then
+  if group_emoji_lock == '😞' then
     return 'فرستادن اموجی از قبل قفل نبوده است'
   else
-    data[tostring(target)]['settings']['antiemoji'] = 'no'
+    data[tostring(target)]['settings']['antiemoji'] = '😞'
     save_data(_config.moderation.data, data)
     return 'فرستادن اموجی مجاز شد'
   end
@@ -551,10 +551,10 @@ local function unlock_group_fosh(msg, data, target)
     return "برای شا مجاز نمیباشد"
   end
   local group_fosh_lock = data[tostring(target)]['settings']['antifosh']
-  if group_fosh_lock == 'no' then
+  if group_fosh_lock == '😞' then
     return 'فرستادن فحش از قبلا قفل نبوده است'
   else
-    data[tostring(target)]['settings']['antifosh'] = 'no'
+    data[tostring(target)]['settings']['antifosh'] = '😞'
     save_data(_config.moderation.data, data)
     return 'فرستادن فحش مجاز شد'
   end
@@ -579,10 +579,10 @@ local function unlock_group_chat(msg, data, target)
     return "برای شما مجاز نمیباشد"
   end
   local group_chat_lock = data[tostring(target)]['settings']['lock_chat']
-  if group_chat_lock == 'no' then
+  if group_chat_lock == '😞' then
     return 'چت کردن از قبل قفل نبوده است'
   else
-    data[tostring(target)]['settings']['lock_chat'] = 'no'
+    data[tostring(target)]['settings']['lock_chat'] = '😞'
     save_data(_config.moderation.data, data)
     return 'چت کردن مجاز شد'
   end
@@ -607,10 +607,10 @@ local function unlock_group_bots(msg, data, target)
     return "برای شما مجاز نمیباشد"
   end
   local group_bots_lock = data[tostring(target)]['settings']['lock_bots']
-  if group_bots_lock == 'no' then
+  if group_bots_lock == '😞' then
     return 'اوردن بات ها از قبل قفل نبوده است'
   else
-    data[tostring(target)]['settings']['lock_bots'] = 'no'
+    data[tostring(target)]['settings']['lock_bots'] = '😞'
     save_data(_config.moderation.data, data)
     return 'اوردن بات ها مجاز شد'
   end
@@ -637,10 +637,10 @@ local function unlock_group_namemod(msg, data, target)
   end
   local group_name_set = data[tostring(target)]['settings']['set_name']
   local group_name_lock = data[tostring(target)]['settings']['lock_name']
-  if group_name_lock == 'no' then
+  if group_name_lock == '😞' then
     return 'نام گروه از قبل قفل نبوده است'
   else
-    data[tostring(target)]['settings']['lock_name'] = 'no'
+    data[tostring(target)]['settings']['lock_name'] = '😞'
     save_data(_config.moderation.data, data)
     return 'تغییر نام گروه مجاز شد'
   end
@@ -664,10 +664,10 @@ local function unlock_group_floodmod(msg, data, target)
     return "فقط ادمین های اصلی ربات میتوانند اسنفاده کنند"
   end
   local group_flood_lock = data[tostring(target)]['settings']['flood']
-  if group_flood_lock == 'no' then
+  if group_flood_lock == '😞' then
     return 'حساسیت اسپم از قبل قفل نبوده است'
   else
-    data[tostring(target)]['settings']['flood'] = 'no'
+    data[tostring(target)]['settings']['flood'] = '😞'
     save_data(_config.moderation.data, data)
     return 'اسپم دادن در گروه مجاز شد'
   end
@@ -692,10 +692,10 @@ local function unlock_group_membermod(msg, data, target)
     return "برای شما مجاز نمیباشد"
   end
   local group_member_lock = data[tostring(target)]['settings']['lock_member']
-  if group_member_lock == 'no' then
+  if group_member_lock == '😞' then
     return 'اوردن ممبر به گروه از قبل قفل نبوده است'
   else
-    data[tostring(target)]['settings']['lock_member'] = 'no'
+    data[tostring(target)]['settings']['lock_member'] = '😞'
     save_data(_config.moderation.data, data)
     return 'اوردن ممبر به گروه مجاز شد'
   end
@@ -749,10 +749,10 @@ local function unlock_group_leave(msg, data, target)
     return "برای شما مجاز نمیباشد"
   end
   local leave_ban = data[tostring(msg.to.id)]['settings']['leave_ban']
-  if leave_ban == 'no' then
+  if leave_ban == '😞' then
     return 'لفت = بن از قبل قفل نبوده است'
   else
-    data[tostring(msg.to.id)]['settings']['leave_ban'] = 'no'
+    data[tostring(msg.to.id)]['settings']['leave_ban'] = '😞'
     save_data(_config.moderation.data, data)
     return 'لفت دادن ممبر ها باعث بن شدنشان نمیشود'
   end
@@ -763,10 +763,10 @@ local function unlock_group_photomod(msg, data, target)
     return "برای شما مجاز نمیباشد"
   end
   local group_photo_lock = data[tostring(target)]['settings']['lock_photo']
-  if group_photo_lock == 'no' then
+  if group_photo_lock == '😞' then
     return 'عکس گروه از قبل قفل نبوده است'
   else
-    data[tostring(target)]['settings']['lock_photo'] = 'no'
+    data[tostring(target)]['settings']['lock_photo'] = '😞'
     save_data(_config.moderation.data, data)
     return 'تعویض عکس گروه مجاز شد'
   end
