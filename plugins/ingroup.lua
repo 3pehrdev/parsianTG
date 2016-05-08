@@ -258,7 +258,7 @@ local function show_group_settingsmod(msg, data, target)
 local gp_type = data[tostring(msg.to.id)]['group_type']
 
   local settings = data[tostring(target)]['settings']
-  local text = "#تنظیمات_گروه :\n#قفل اسم گروه : "..settings.lock_name.."\n#قفل عکس گروه : "..settings.lock_photo.."\n#قفل اعضای گروه : "..settings.lock_member.."\n#قفل لفت دادن : "..settings.leave_ban.."\n#قفل فارسی : "..settings.lock_arabic.."\n#قفل انگلیسی : "..settings.lock_english.."\n#قفل چت کردن : "..settings.lock_chat.."\n#قفل جوین با لینک : "..settings.lock_join.."\n#قفل @ و # : "..settings.antitag.."\n#قفل فرستادن لینک : "..settings.lock_ads.."\n#قفل اموجی : "..settings.antiemoji.."\n#قفل شماره تلفن : "..settings.lock_share.."\n#قفل ویدئو : "..settings.lock_video.."\n#قفل صدا : "..settings.lock_voice.."\n#قفل فحش : "..settings.antifosh.."\n#حساسیت به اسپم : "..NUM_MSG_MAX.."\n#ورود بات ها به گروه : "..bots_protection.."\n#مدل گروه : "..gp_type.."\n#ورژن ربات : "..VERSION.." \n\n#برنامه نویسی شده توسط\n #پارسیان تیم\n#کانال ما : @SpheroCh"
+  local text = "#تنظیمات_گروه :\n#قفل اسم گروه : "..settings.lock_name.."\n#قفل عکس گروه : "..settings.lock_photo.."\n#قفل اعضای گروه : "..settings.lock_member.."\n#قفل لفت دادن : "..settings.leave_ban.."\n#قفل فارسی : "..settings.lock_arabic.."\n#قفل انگلیسی : "..settings.lock_english.."\n#قفل چت کردن : "..settings.lock_chat.."\n#قفل جوین با لینک : "..settings.lock_join.."\n#قفل @ و # : "..settings.antitag.."\n#قفل فرستادن لینک : "..settings.lock_ads.."\n#قفل اموجی : "..settings.antiemoji.."\n#قفل شماره تلفن : "..settings.lock_share.."\n#قفل ویدئو : "..settings.lock_video.."\n#قفل صدا : "..settings.lock_voice.."\n#قفل فحش : "..settings.antifosh.."\n#حساسیت به اسپم : "..NUM_MSG_MAX.."\n#ورود بات ها به گروه : "..bots_protection.."\n#مدل گروه : "..gp_type.."\n#ورژن ربات : "..VERSION.." \n#برنامه نویسی شده توسط\n #پارسیان تیم\n#کانال ما : @SpheroCh"
   return text
 end
 
@@ -779,16 +779,16 @@ local function set_rulesmod(msg, data, target)
   local data_cat = 'rules'
   data[tostring(target)][data_cat] = rules
   save_data(_config.moderation.data, data)
-  return 'Set group rules to:\n'..rules
+  return 'قوانین گروه تغییر کرد به :\n'..rules
 end
 local function modadd(msg)
   -- superuser and admins only (because sudo are always has privilege)
   if not is_admin(msg) then
-    return "You're not admin"
+    return "برای شما مجاز نمیباشد"
   end
   local data = load_data(_config.moderation.data)
   if is_group(msg) then
-    return 'Group is already added.'
+    return 'گروه از قبل اضافه شده '
   end
     receiver = get_receiver(msg)
     chat_info(receiver, check_member_modadd,{receiver=receiver, data=data, msg = msg})
@@ -796,11 +796,11 @@ end
 local function realmadd(msg)
   -- superuser and admins only (because sudo are always has privilege)
   if not is_admin(msg) then
-    return "You're not admin"
+    return "برای شما مجاز نمیباشد"
   end
   local data = load_data(_config.moderation.data)
   if is_realm(msg) then
-    return 'Realm is already added.'
+    return 'گروه ریلم از قبل ادد شده بود'
   end
     receiver = get_receiver(msg)
     chat_info(receiver, check_member_realm_add,{receiver=receiver, data=data, msg = msg}) 
@@ -809,11 +809,11 @@ end
 function modrem(msg)
   -- superuser and admins only (because sudo are always has privilege)
   if not is_admin(msg) then
-    return "You're not admin"
+    return "برای شما مجاز نمیباشد"
   end
   local data = load_data(_config.moderation.data)
   if not is_group(msg) then
-    return 'Group is not added.'
+    return 'گروه اضافه نشده است'
   end
     receiver = get_receiver(msg)
     chat_info(receiver, check_member_modrem,{receiver=receiver, data=data, msg = msg})
@@ -822,11 +822,11 @@ end
 function realmrem(msg)
   -- superuser and admins only (because sudo are always has privilege)
   if not is_admin(msg) then
-    return "You're not admin"
+    return "برای شما مجاز نمیباشد"
   end
   local data = load_data(_config.moderation.data)
   if not is_realm(msg) then
-    return 'Realm is not added.'
+    return 'گروه ریلم ادد نشده است'
   end
     receiver = get_receiver(msg)
     chat_info(receiver, check_member_realmrem,{receiver=receiver, data=data, msg = msg})
@@ -834,10 +834,10 @@ end
 local function get_rules(msg, data)
   local data_cat = 'rules'
   if not data[tostring(msg.to.id)][data_cat] then
-    return 'No rules available.'
+    return 'قوانینی موجود نیست'
   end
   local rules = data[tostring(msg.to.id)][data_cat]
-  local rules = 'Chat rules:\n'..rules
+  local rules = "قوانین گروه:\n'..rules
   return rules
 end
 
@@ -948,14 +948,14 @@ local function modlist(msg)
   local data = load_data(_config.moderation.data)
   local groups = "groups"
   if not data[tostring(groups)][tostring(msg.to.id)] then
-    return 'Group is not added.'
+    return 'گروه اضافه نشده است'
   end
   -- determine if table is empty
   if next(data[tostring(msg.to.id)]['moderators']) == nil then --fix way
-    return 'No moderator in this group.'
+    return 'enدمدیری برای این گروه وجود ندارم'
   end
   local i = 1
-  local message = '\nList of moderators for ' .. string.gsub(msg.to.print_name, '_', ' ') .. ':\n'
+  local message = 'لیست مدیر های' .. string.gsub(msg.to.print_name, '_', ' ') .. ':\n'
   for k,v in pairs(data[tostring(msg.to.id)]['moderators']) do
     message = message ..i..' - '..v..' [' ..k.. '] \n'
     i = i + 1
